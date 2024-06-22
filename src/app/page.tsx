@@ -1,6 +1,8 @@
+import { cookies } from "next/headers";
 import { getCachedData } from "./get-cached-data";
 
 export default async function Home() {
+  cookies();
   const data = await getCachedData();
 
   return (
